@@ -96,3 +96,9 @@ def test_button_Orders_on_page(driver):
     #main_page.find_click(MainPage.FAVORITES)
     #Favorites_page_header = main_page.get_text_of_element(MainPage.HEAD_OF_PAGE_FAVORITES)
     #assert Favorites_page_header == TestData.HEADER_OF_PAGE_FAVORITES
+    
+#Кнопка Корзина видна на странице
+def test_button_cart_on_page(driver):
+    main_page = MainPage(driver)
+    button = main_page.is_visible(MainPage.CART)
+    assert button == True
