@@ -102,3 +102,9 @@ def test_button_cart_on_page(driver):
     main_page = MainPage(driver)
     button = main_page.is_visible(MainPage.CART)
     assert button == True
+#Кнопка Корзина кликабельна и попадаем в соответствующий раздел
+def test_cart_clickable(driver):
+    main_page = MainPage(driver)
+    main_page.find_click(MainPage.CART)
+    window_title = main_page.get_windows_title(TestData.HEADER_OF_WINDOW_CART)
+    assert window_title == True
