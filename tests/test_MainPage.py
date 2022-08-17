@@ -60,3 +60,20 @@ def test_entrance_on_page(driver):
     entrance = main_page.is_visible(MainPage.ENTRANCE)
     assert entrance == True
 
+
+# При наведении на кнопку Войти появляется всплывающее окно
+# def test_popup_window_appear(driver):
+# main_page = MainPage(driver)
+# main_page.show_popup_window(MainPage.ENTRANCE)
+# popup_window = main_page.is_visible(MainPage.POPUP_WINDOW_ENTRANCE)
+# assert popup_window == True
+
+# Всплывающее окно исчезает, когда курсор уводим с кнопки Войти
+#def test_popup_window_message_button_disappeared(driver):
+    #main_page = MainPage(driver)
+    #main_page.show_popup_window(MainPage.ENTRANCE)
+    #popup_window = main_page.is_visible(MainPage.POPUP_WINDOW_ENTRANCE)
+    #assert popup_window == True
+    #main_page.put_away_from_element(MainPage.FAVORITES)
+    #popup_window_disappeared = main_page.isnt_visible(MainPage.POPUP_WINDOW_ENTRANCE)
+    #assert popup_window_disappeared is True
