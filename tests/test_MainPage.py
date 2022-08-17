@@ -31,6 +31,12 @@ def test_button_catalog_has_true_name(driver):
     main_page = MainPage(driver)
     button_name = main_page.get_text_of_element(MainPage.CATALOG)
     assert button_name == TestData.NAME_OF_BUTTON_CATALOG
+    
+#Кнопка Избранное видна на странице
+def test_button_favorites_on_page(driver):
+    main_page = MainPage(driver)
+    button = main_page.is_visible(MainPage.FAVORITES)
+    assert button == True    
 
 
 # Кнопка локализации поиска видна на странице
