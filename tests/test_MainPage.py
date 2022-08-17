@@ -77,3 +77,9 @@ def test_entrance_on_page(driver):
     #main_page.put_away_from_element(MainPage.FAVORITES)
     #popup_window_disappeared = main_page.isnt_visible(MainPage.POPUP_WINDOW_ENTRANCE)
     #assert popup_window_disappeared is True
+    
+#Кнопка Заказы видна на странице
+def test_button_Orders_on_page(driver):
+    main_page = MainPage(driver)
+    button = main_page.is_visible(MainPage.ORDERS)
+    assert button == True
