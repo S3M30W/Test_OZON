@@ -36,15 +36,19 @@ def test_button_catalog_has_true_name(driver):
 def test_button_favorites_on_page(driver):
     main_page = MainPage(driver)
     button = main_page.is_visible(MainPage.FAVORITES)
-    assert button == True    
+    assert button == True
 
+# Кнопка Избранное имеет верное название
+def test_button_catalog_has_true_name(driver):
+    main_page = MainPage(driver)
+    button_name = main_page.get_text_of_element(MainPage.FAVORITES)
+    assert button_name == TestData.NAME_OF_BUTTON_FAVORITES    
 
 # Кнопка локализации поиска видна на странице
 def test_search_where_on_page(driver):
     main_page = MainPage(driver)
     button = main_page.is_visible(MainPage.SEARCH_WHERE)
     assert button == True
-
 
 # Строка поиска видна на странице
 def test_search_on_page(driver):
@@ -65,6 +69,12 @@ def test_entrance_on_page(driver):
     main_page = MainPage(driver)
     entrance = main_page.is_visible(MainPage.ENTRANCE)
     assert entrance == True
+
+# Кнопка Войти имеет верное название
+def test_button_catalog_has_true_name(driver):
+    main_page = MainPage(driver)
+    button_name = main_page.get_text_of_element(MainPage.ENTRANCE)
+    assert button_name == TestData.NAME_OF_BUTTON_ENTRANCE
 
 
 # При наведении на кнопку Войти появляется всплывающее окно
@@ -89,6 +99,12 @@ def test_button_Orders_on_page(driver):
     main_page = MainPage(driver)
     button = main_page.is_visible(MainPage.ORDERS)
     assert button == True
+
+# Кнопка Заказы имеет верное название
+def test_button_catalog_has_true_name(driver):
+    main_page = MainPage(driver)
+    button_name = main_page.get_text_of_element(MainPage.ORDERS)
+    assert button_name == TestData.NAME_OF_BUTTON_ORDERS
     
 #Кнопка Избранное кликабельна, попадаем в соответствующий раздел
 #def test_favorites_clickable(driver):
@@ -102,13 +118,19 @@ def test_button_cart_on_page(driver):
     main_page = MainPage(driver)
     button = main_page.is_visible(MainPage.CART)
     assert button == True
+
+# Кнопка Корзина имеет верное название
+def test_button_catalog_has_true_name(driver):
+    main_page = MainPage(driver)
+    button_name = main_page.get_text_of_element(MainPage.CART)
+    assert button_name == TestData.NAME_OF_BUTTON_CART
     
 #Кнопка Корзина кликабельна и попадаем в соответствующий раздел
-def test_cart_clickable(driver):
-    main_page = MainPage(driver)
-    main_page.find_click(MainPage.CART)
-    window_title = main_page.get_windows_title(TestData.HEADER_OF_WINDOW_CART)
-    assert window_title == True
+#def test_cart_clickable(driver):
+   # main_page = MainPage(driver)
+   # main_page.find_click(MainPage.CART)
+   # window_title = main_page.get_windows_title(TestData.HEADER_OF_WINDOW_CART)
+   # assert window_title == True
     
 #Кнопка раздела Ozon fresh видна на странице
 def test_button_top_fashion_on_page(driver):
