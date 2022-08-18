@@ -121,13 +121,13 @@ def test_button_top_fashion_has_true_name(driver):
     main_page = MainPage(driver)
     button_name = main_page.get_text_of_element(MainPage.TOPFASHION)
     assert button_name == TestData.NAME_OF_BUTTON_TOP_FASHION
-#
-#Кнопка TopFashion кликабельна и попадаем в соответствующий раздел
-def test_topFashion_clickable(driver):
-    main_page = MainPage(driver)
-    main_page.find_click(MainPage.TOPFASHION)
-    page_header = main_page.get_text_of_element(MainPage.HEAD_OF_PAGE_TOP_FASHION)
-    assert page_header == TestData.TOP_FASHION
+
+#Кнопка Ozon fresh кликабельна и попадаем в соответствующий раздел
+#def test_topFashion_clickable(driver):
+   # main_page = MainPage(driver)
+   # main_page.find_click(MainPage.TOPFASHION)
+    #page_header = main_page.get_text_of_element(MainPage.HEAD_OF_PAGE_TOP_FASHION)
+   # assert page_header == TestData.TOP_FASHION
 
 #Кнопка раздела Premium видна на странице
 def test_button_Premium_on_page(driver):
@@ -141,7 +141,7 @@ def test_button_premium_has_true_name(driver):
     button_name = main_page.get_text_of_element(MainPage.Premium)
     assert  button_name == TestData.NAME_OF_BUTTON_Premium
 
-# #Кнопка раздела Ozon travel видна на странице
+#Кнопка раздела Ozon travel видна на странице
 def test_button_ozon_travel_on_page(driver):
     main_page = MainPage(driver)
     button = main_page.is_visible(MainPage.OZON_TRAVEL)
@@ -154,13 +154,13 @@ def test_button_ozon_travel_has_true_name(driver):
     assert button_name == TestData.NAME_OF_BUTTON_OZON_TRAVEL
 
 #Кнопка Ozon travel кликабельна, попадаем в соответствующий раздел
-def test_Ozon_travel_clickable(driver):
-    main_page = MainPage(driver)
-    main_page.find_click(MainPage.OZON_TRAVEL)
-    window_title = main_page.get_windows_title(TestData.HEADER_OF_WINDOW_OZON_TRAVEL)
-    assert window_title == True
+#def test_Ozon_travel_clickable(driver):
+   # main_page = MainPage(driver)
+   # main_page.find_click(MainPage.OZON_TRAVEL)
+   # window_title = main_page.get_windows_title(TestData.HEADER_OF_WINDOW_OZON_TRAVEL)
+   # assert window_title == True
 
- #Кнопка раздела Ozon счет видна на странице
+#Кнопка раздела Ozon счет видна на странице
 def test_button_Ozon_bank_on_page(driver):
     main_page = MainPage(driver)
     button = main_page.is_visible(MainPage.OZON_BANK)
@@ -173,13 +173,13 @@ def test_button_ozon_bank_has_true_name(driver):
     assert button_name == TestData.NAME_OF_BUTTON_OZON_BANK
 
 #Кнопка Ozon счет кликабельна, попадаем в соответствующий раздел
-def test_Ozon_bank_clickable(driver):
-    main_page = MainPage(driver)
-    main_page.find_click(MainPage.OZON_BANK)
-    window_title = main_page.get_windows_title(TestData.HEADER_OF_WINDOW_OZON_BANK)
-    assert window_title == True
+#def test_Ozon_bank_clickable(driver):
+    #main_page = MainPage(driver)
+   # main_page.find_click(MainPage.OZON_BANK)
+   # window_title = main_page.get_windows_title(TestData.HEADER_OF_WINDOW_OZON_BANK)
+   # assert window_title == True
 
- #Кнопка раздела LIVE счет видна на странице
+#Кнопка раздела LIVE счет видна на странице
 def test_button_LIVE_on_page(driver):
     main_page = MainPage(driver)
     button = main_page.is_visible(MainPage.LIVE)
@@ -192,13 +192,13 @@ def test_button_LIVE_has_true_name(driver):
     assert button_name == TestData.NAME_OF_BUTTON_LIVE
 
 #Кнопка Ozon LIVE кликабельна, попадаем в соответствующий раздел
-def test_LIVE_clickable(driver):
-    main_page = MainPage(driver)
-    main_page.find_click(MainPage.LIVE)
-    window_title = main_page.get_windows_title(TestData.HEADER_OF_WINDOW_LIVE)
-    assert window_title == True
+#def test_LIVE_clickable(driver):
+   # main_page = MainPage(driver)
+   # main_page.find_click(MainPage.LIVE)
+   # window_title = main_page.get_windows_title(TestData.HEADER_OF_WINDOW_LIVE)
+   # assert window_title == True
 
- #Кнопка раздела Акции счет видна на странице
+#Кнопка раздела Акции счет видна на странице
 def test_button_actions_on_page(driver):
     main_page = MainPage(driver)
     button = main_page.is_visible(MainPage.ACTIONS)
@@ -211,11 +211,11 @@ def test_button_action_has_true_name(driver):
     assert button_name == TestData.NAME_OF_BUTTON_ACTIONS
 
 #Кнопка Акции кликабельна, попадаем в соответствующий раздел
-def test_actions_clickable(driver):
-    main_page = MainPage(driver)
-    main_page.find_click(MainPage.ACTIONS)
-    title_of_page = main_page.get_text_of_element(MainPage.HEAD_OF_PAGE_ACTIONS)
-    assert title_of_page == TestData.HEADER_OF_PAGE_OF_ACTIONS
+#def test_actions_clickable(driver):
+ #   main_page = MainPage(driver)
+  #  main_page.find_click(MainPage.ACTIONS)
+  #  title_of_page = main_page.get_text_of_element(MainPage.HEAD_OF_PAGE_ACTIONS)
+  #  assert title_of_page == TestData.HEADER_OF_PAGE_OF_ACTIONS
 
 #  #Кнопка раздела Бренды видна на странице
 def test_button_brands_on_page(driver):
@@ -228,26 +228,26 @@ def test_button_brands_has_true_name(driver):
     main_page = MainPage(driver)
     button_name = main_page.get_text_of_element(MainPage.BRENDS)
     assert button_name == TestData.NAME_OF_BUTTON_BRANDS
-#
-#Кнопка Бренды кликабельна, попадаем в соответствующий раздел
-def test_brends_clickable(driver):
-    main_page = MainPage(driver)
-    main_page.find_click(MainPage.BRENDS)
-    title_of_page = main_page.get_text_of_element(MainPage.HEAD_OF_PAGE_BRENDS)
-    assert title_of_page == TestData.HEADER_OF_PAGE_OF_BRENDS
 
-#  #Кнопка раздела Магазины видна на странице
+#Кнопка Бренды кликабельна, попадаем в соответствующий раздел
+#def test_brends_clickable(driver):
+  #  main_page = MainPage(driver)
+   # main_page.find_click(MainPage.BRENDS)
+   # title_of_page = main_page.get_text_of_element(MainPage.HEAD_OF_PAGE_BRENDS)
+   # assert title_of_page == TestData.HEADER_OF_PAGE_OF_BRENDS
+
+# Кнопка раздела Express видна на странице
 def test_button_shops_on_page(driver):
     main_page = MainPage(driver)
     button = main_page.is_visible(MainPage.SHOPS)
     assert button == True
 
 #Кнопка Магазины кликабельна, попадаем в соответствующий раздел
-def test_shops_clickable(driver):
-    main_page = MainPage(driver)
-    main_page.find_click(MainPage.SHOPS)
-    title_of_page = main_page.get_text_of_element(MainPage.HEAD_OF_PAGE_SHOPS)
-    assert title_of_page == TestData.HEADER_OF_PAGE_OF_SHOPS
+#def test_shops_clickable(driver):
+  #  main_page = MainPage(driver)
+  #  main_page.find_click(MainPage.SHOPS)
+  #  title_of_page = main_page.get_text_of_element(MainPage.HEAD_OF_PAGE_SHOPS)
+  #  assert title_of_page == TestData.HEADER_OF_PAGE_OF_SHOPS
 
 #  #Кнопка раздела Электроника видна на странице
 def test_button_electronica_on_page(driver):
