@@ -1,21 +1,22 @@
 class TestData:
     BASE_URL = 'https://www.ozon.ru/'
 
-    #Заголовки окон с соответствующми страницами,
+    # Заголовки окон с соответствующми страницами,
     # где нет заголовка раздела на самой странице там заголово окна
-    HEADER_OF_WINDOW_MAIN_LOGO = 'Global Promo'
+    HEADER_OF_WINDOW_MAIN_LOGO = 'Выгодные предложения'
     NAME_OF_BUTTON_CATALOG = "Каталог"
-    NAME_OF_BUTTON_TOP_FASHION = "TOP Fashion"
+    NAME_OF_BUTTON_TOP_FASHION = "Ozon fresh"
     HEADER_OF_PAGE_FAVORITES = "Избранное"
     NAME_OF_BUTTON_FAVORITES = "Избранное"
     HEADER_OF_WINDOW_CART = 'Моя корзина'
-    TOP_FASHION = "TOP Fashion"
+    TOP_FASHION = "Ozon fresh"
     NAME_OF_BUTTON_Premium = "Premium"
-    NAME_OF_BUTTON_OZON_TRAVEL = "Ozon Travel"
-    NAME_OF_BUTTON_OZON_BANK = "Ozon Счёт"
-    NAME_OF_BUTTON_LIVE = "LIVE"
+    NAME_OF_BUTTON_OZON_TRAVEL = "Билеты и Отели"
+    NAME_OF_BUTTON_OZON_BANK = "Ozon Карта"
+    NAME_OF_BUTTON_LIVE = "Рассрочка"
     NAME_OF_BUTTON_ACTIONS = "Акции"
     NAME_OF_BUTTON_BRANDS = "Бренды"
+    NAME_OF_BUTTON_SHOPS = "Express"
     HEADER_OF_WINDOW_OZON_TRAVEL = "Поиск дешевых авиа и жд билетов онлайн"
     HEADER_OF_WINDOW_OZON_BANK = "Кешбэк до 30%"
     HEADER_OF_WINDOW_LIVE = "Ozon Live"
@@ -30,12 +31,5 @@ class TestData:
     HEADER_OF_PAGE_OF_KIDS_GOODS = "Детские товары"
     NAME_OF_BUTTON_HOUSE_AND_GARDEN = "Дом и сад"
     HEADER_OF_PAGE_OF_HOUSE_AND_GARDEN = "Дом и сад"
+    HEADER_OF_WINDOW_FIELD_CITY = "Изменить"
     HEADER_OF_WINDOW_SELECT_CITY = "Выберите город"
-
-
-
-
-
-
-    #Заголовки субменю кнопки 'Каталог'
-    ELECTRONICA= "Электроника"
