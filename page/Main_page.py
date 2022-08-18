@@ -15,7 +15,7 @@ class MainPage(BasePage):
     HEAD_OF_PAGE_ELECTRONICA_SUB = (By.XPATH, "//h1[@class = 'b3a0' and contains (text(), 'Электроника')]")
     SEARCH_WHERE = (By.CSS_SELECTOR, "div[data-widget = 'searchBarDesktop'] form div span")
     SEARCH_INPUT = (By.XPATH, "//input[@placeholder = 'Искать на Ozon']")
-    SUBMIT_SEARCH = (By.XPATH, "//button[@class ='aja4']")
+    SUBMIT_SEARCH = (By.XPATH, "//button[@class='aj4a']")
     ENTRANCE = (By.CSS_SELECTOR, "div[data-widget = 'profileMenuAnonymous']")
     POPUP_WINDOW_ENTRANCE = (By.XPATH, "//div[@style ='position: absolute; top: -9999px; left: -9999px;']")
     FAVORITES = (By.XPATH, "//a[@href = '/my/favorites']")
