@@ -332,6 +332,18 @@ def test_button_house_and_garden_has_true_name(driver):
     #window_title = main_page.get_text_of_element(MainPage.HOUSE_AND_GARDEN)
    # assert window_title == TestData.HEADER_OF_PAGE_OF_HOUSE_AND_GARDEN
 
+#Кнопка раздела Реферальная программа видна на странице
+def test_button_top_fashion_on_page(driver):
+    main_page = MainPage(driver)
+    button = main_page.is_visible(MainPage.REFERRAL_PROGRAM)
+    assert button == True
+
+#Кнопка Реферальная программа имеет верное название
+def test_button_top_fashion_has_true_name(driver):
+    main_page = MainPage(driver)
+    button_name = main_page.get_text_of_element(MainPage.REFERRAL_PROGRAM)
+    assert button_name == TestData.NAME_OF_BUTTON_REFERRAL_PROGRAM
+
 #Кнопка города видна на странице
 def test_definite_city_on_page(driver):
     main_page = MainPage(driver)
