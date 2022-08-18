@@ -332,15 +332,29 @@ def test_button_house_and_garden_has_true_name(driver):
     #window_title = main_page.get_text_of_element(MainPage.HOUSE_AND_GARDEN)
    # assert window_title == TestData.HEADER_OF_PAGE_OF_HOUSE_AND_GARDEN
 
-#Кнопка выбора города видна на странице
+#Кнопка города видна на странице
 def test_definite_city_on_page(driver):
     main_page = MainPage(driver)
     button = main_page.is_visible(MainPage.BUTTON_SELECT_CITY)
     assert button == True
 
-#При нажатии кнопки выбора города появляется окно выбора города
+#При нажатии кнопки города появляется кнопка измененить город
 def test_definite_city_appear_window(driver):
     main_page = MainPage(driver)
     main_page.find_click(MainPage.BUTTON_SELECT_CITY)
-    window_title = main_page.get_text_of_element(MainPage.HEAD_OF_WINDOW_SELECT_CITY)
-    assert window_title == TestData.HEADER_OF_WINDOW_SELECT_CITY
+    window_title = main_page.get_text_of_element(MainPage.FIELD_CITY)
+    assert window_title == TestData.FIELD_CITY
+   
+# Кнопка изменить раздела выбор города имеет верное название
+def test_button_house_and_garden_has_true_name(driver):
+    main_page = MainPage(driver)
+    main_page.find_click(MainPage.BUTTON_SELECT_CITY)
+    button_name = main_page.get_text_of_element(MainPage.FIELD_CITY)
+    assert button_name == TestData.HEADER_OF_WINDOW_FIELD_CITY
+
+#При нажатии кнопки изменить появляется окно выбора города
+def test_definite_city_appear_window(driver):
+    main_page = MainPage(driver)
+    main_page.find_click(MainPage.BUTTON_SELECT_CITY)
+    window_title = main_page.get_text_of_element(MainPage.LIST_OF_SUITABLE_CITIES)
+    assert window_title == TestData.LIST_OF_SUITABLE_CITIES
