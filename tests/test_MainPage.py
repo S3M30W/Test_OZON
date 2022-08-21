@@ -33,17 +33,17 @@ def test_button_catalog_has_true_name(driver):
 
 
 # Кнопка Избранное видна на странице
-def test_button_favorites_on_page(driver):
+def test_button_favourites_on_page(driver):
     main_page = MainPage(driver)
-    button = main_page.is_visible(MainPage.FAVORITES)
+    button = main_page.is_visible(MainPage.FAVOURITES)
     assert button == True
 
 
 # Кнопка Избранное имеет верное название
-def test_button_catalog_has_true_name(driver):
+def test_button_favourites_has_true_name(driver):
     main_page = MainPage(driver)
-    button_name = main_page.get_text_of_element(MainPage.FAVORITES)
-    assert button_name == TestData.NAME_OF_BUTTON_FAVORITES
+    button_name = main_page.get_text_of_element(MainPage.FAVOURITES)
+    assert button_name == TestData.NAME_OF_BUTTON_FAVOURITES
 
 
 # Кнопка локализации поиска видна на странице
@@ -75,7 +75,7 @@ def test_entrance_on_page(driver):
 
 
 # Кнопка Войти имеет верное название
-def test_button_catalog_has_true_name(driver):
+def test_button_entrance_has_true_name(driver):
     main_page = MainPage(driver)
     button_name = main_page.get_text_of_element(MainPage.ENTRANCE)
     assert button_name == TestData.NAME_OF_BUTTON_ENTRANCE
@@ -88,7 +88,7 @@ def test_popup_window_appear(driver):
     popup_window = main_page.is_visible(MainPage.POPUP_WINDOW_ENTRANCE)
     assert popup_window == True
 
-# Всплывающее окно исчезает, когда курсор уводим с кнопки Войти
+# Всплывающее окно исчезает, когда курсор уходит с кнопки Войти
 def test_popup_window_message_button_disappeared(driver):
     main_page = MainPage(driver)
     main_page.show_popup_window(MainPage.ENTRANCE)
@@ -106,58 +106,58 @@ def test_button_Orders_on_page(driver):
 
 
 # Кнопка Заказы имеет верное название
-def test_button_catalog_has_true_name(driver):
+def test_button_Orders_has_true_name(driver):
     main_page = MainPage(driver)
     button_name = main_page.get_text_of_element(MainPage.ORDERS)
     assert button_name == TestData.NAME_OF_BUTTON_ORDERS
 
 
 # Кнопка Избранное кликабельна, попадаем в соответствующий раздел
-def test_favorites_clickable(driver):
+def test_Orders_clickable(driver):
     main_page = MainPage(driver)
     main_page.find_click(MainPage.FAVORITES)
     Favorites_page_header = main_page.get_text_of_element(MainPage.HEAD_OF_PAGE_FAVORITES)
     assert Favorites_page_header == TestData.HEADER_OF_PAGE_FAVORITES
 
 # Кнопка Корзина видна на странице
-def test_button_cart_on_page(driver):
+def test_button_basket_on_page(driver):
     main_page = MainPage(driver)
-    button = main_page.is_visible(MainPage.CART)
+    button = main_page.is_visible(MainPage.BASKET)
     assert button == True
 
 
 # Кнопка Корзина имеет верное название
-def test_button_catalog_has_true_name(driver):
+def test_button_basket_has_true_name(driver):
     main_page = MainPage(driver)
-    button_name = main_page.get_text_of_element(MainPage.CART)
-    assert button_name == TestData.NAME_OF_BUTTON_CART
+    button_name = main_page.get_text_of_element(MainPage.BASKET)
+    assert button_name == TestData.NAME_OF_BUTTON_BASKET
 
 
 # Кнопка Корзина кликабельна и попадаем в соответствующий раздел
-def test_cart_clickable(driver):
+def test_basket_clickable(driver):
     main_page = MainPage(driver)
-    main_page.find_click(MainPage.CART)
-    window_title = main_page.get_windows_title(TestData.HEADER_OF_WINDOW_CART)
+    main_page.find_click(MainPage.BASKET)
+    window_title = main_page.get_windows_title(TestData.HEADER_OF_WINDOW_BASKET)
     assert window_title == True
 
 # Кнопка раздела Ozon fresh видна на странице
-def test_button_top_fashion_on_page(driver):
+def test_button_Ozon_fresh_on_page(driver):
     main_page = MainPage(driver)
     button = main_page.is_visible(MainPage.OZON_FRESH)
     assert button == True
 
 
 # Кнопка Ozon fresh имеет верное название
-def test_button_top_fashion_has_true_name(driver):
+def test_button_Ozon_fresh_has_true_name(driver):
     main_page = MainPage(driver)
     button_name = main_page.get_text_of_element(MainPage.OZON_FRESH)
     assert button_name == TestData.NAME_OF_BUTTON_TOP_FRESH
 
 
 # Кнопка Ozon fresh кликабельна и попадаем в соответствующий раздел
-def test_topFashion_clickable(driver):
+def test_Ozon_fresh_clickable(driver):
     main_page = MainPage(driver)
-    main_page.find_click(MainPage.TOPFASHION)
+    main_page.find_click(MainPage.OZON_FRESH)
     page_header = main_page.get_text_of_element(MainPage.HEAD_OF_PAGE_FRESH)
     assert page_header == TestData.FRESH
 
@@ -169,75 +169,73 @@ def test_button_Premium_on_page(driver):
 
 
 # Кнопка Premium имеет верное название
-def test_button_premium_has_true_name(driver):
+def test_button_Premium_has_true_name(driver):
     main_page = MainPage(driver)
     button_name = main_page.get_text_of_element(MainPage.PREMIUM)
     assert button_name == TestData.NAME_OF_BUTTON_PREMIUM
 
-
-# Кнопка раздела Ozon travel видна на странице
+# Кнопка раздела Билеты и Отели видна на странице
 def test_button_ozon_travel_on_page(driver):
     main_page = MainPage(driver)
     button = main_page.is_visible(MainPage.OZON_TRAVEL)
     assert button == True
 
 
-# Кнопка Ozon travel имеет верное название
+# Кнопка Билеты и Отели имеет верное название
 def test_button_ozon_travel_has_true_name(driver):
     main_page = MainPage(driver)
     button_name = main_page.get_text_of_element(MainPage.OZON_TRAVEL)
     assert button_name == TestData.NAME_OF_BUTTON_OZON_TRAVEL
 
 
-# Кнопка Ozon travel кликабельна, попадаем в соответствующий раздел
+# Кнопка Билеты и Отели кликабельна, попадаем в соответствующий раздел
 def test_Ozon_travel_clickable(driver):
     main_page = MainPage(driver)
     main_page.find_click(MainPage.OZON_TRAVEL)
     window_title = main_page.get_windows_title(TestData.HEADER_OF_WINDOW_OZON_TRAVEL)
     assert window_title == True
 
-# Кнопка раздела Ozon счет видна на странице
-def test_button_Ozon_bank_on_page(driver):
+
+# Кнопка раздела Ozon Карта видна на странице
+def test_button_Ozon_card_on_page(driver):
     main_page = MainPage(driver)
-    button = main_page.is_visible(MainPage.OZON_BANK)
+    button = main_page.is_visible(MainPage.OZON_CARD)
+    assert button == True
+
+# Кнопка Ozon Карта имеет верное название
+def test_button_ozon_card_has_true_name(driver):
+    main_page = MainPage(driver)
+    button_name = main_page.get_text_of_element(MainPage.OZON_CARD)
+    assert button_name == TestData.NAME_OF_BUTTON_OZON_CARD
+
+# Кнопка Ozon Карта кликабельна, попадаем в соответствующий раздел
+def test_Ozon_card_clickable(driver):
+    main_page = MainPage(driver)
+    main_page.find_click(MainPage.OZON_CARD)
+    window_title = main_page.get_windows_title(TestData.HEADER_OF_WINDOW_OZON_CARD)
+    assert window_title == True
+
+# Кнопка раздела Рассрочка видна на странице
+def test_button_instalment_on_page(driver):
+    main_page = MainPage(driver)
+    button = main_page.is_visible(MainPage.INSTALMENT)
     assert button == True
 
 
-# Кнопка Ozon счет имеет верное название
-def test_button_ozon_bank_has_true_name(driver):
+# Кнопка Рассрочка имеет верное название
+def test_button_instalment_has_true_name(driver):
     main_page = MainPage(driver)
-    button_name = main_page.get_text_of_element(MainPage.OZON_BANK)
-    assert button_name == TestData.NAME_OF_BUTTON_OZON_BANK
+    button_name = main_page.get_text_of_element(MainPage.INSTALMENT)
+    assert button_name == TestData.NAME_OF_BUTTON_INSTALMENT
 
 
-# Кнопка Ozon счет кликабельна, попадаем в соответствующий раздел
-def test_Ozon_bank_clickable(driver):
+# Кнопка Рассрочка кликабельна, попадаем в соответствующий раздел
+def test_instalment_clickable(driver):
     main_page = MainPage(driver)
-    main_page.find_click(MainPage.OZON_BANK)
-    window_title = main_page.get_windows_title(TestData.HEADER_OF_WINDOW_OZON_BANK)
+    main_page.find_click(MainPage.INSTALMENT)
+    window_title = main_page.get_windows_title(TestData.HEADER_OF_WINDOW_INSTALMENT)
     assert window_title == True
-
-# Кнопка раздела LIVE счет видна на странице
-def test_button_LIVE_on_page(driver):
-    main_page = MainPage(driver)
-    button = main_page.is_visible(MainPage.LIVE)
-    assert button == True
-
-
-# Кнопка LIVE имеет верное название
-def test_button_LIVE_has_true_name(driver):
-    main_page = MainPage(driver)
-    button_name = main_page.get_text_of_element(MainPage.LIVE)
-    assert button_name == TestData.NAME_OF_BUTTON_LIVE
-
-
-# Кнопка Ozon LIVE кликабельна, попадаем в соответствующий раздел
-def test_LIVE_clickable(driver):
-    main_page = MainPage(driver)
-    main_page.find_click(MainPage.LIVE)
-    window_title = main_page.get_windows_title(TestData.HEADER_OF_WINDOW_LIVE)
-    assert window_title == True
-
+    
 # Кнопка раздела Акции счет видна на странице
 def test_button_actions_on_page(driver):
     main_page = MainPage(driver)
