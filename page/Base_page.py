@@ -7,7 +7,7 @@ class BasePage:
     def __init__(self, driver):
         self.driver = driver
 
-    # Найти элемент и кликнуть по нему
+    # найти элемент и кликнуть по нему
     def find_click(self, by_locator):
         WebDriverWait(self.driver, 5).until(EC.visibility_of_element_located(by_locator)).click()
 
