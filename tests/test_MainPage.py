@@ -47,6 +47,14 @@ def test_button_favourites_has_true_name(driver):
     assert button_name == TestData.NAME_OF_BUTTON_FAVOURITES
 
 
+# Кнопка Избранное кликабельна, попадаем в соответствующий раздел
+def test_favourites_clickable(driver):
+    main_page = MainPage(driver)
+    main_page.find_click(MainPage.FAVOURITES)
+    window_title = main_page.get_windows_title(TestData.HEADER_OF_PAGE_FAVOURITES)
+    assert window_title == True
+
+
 # Кнопка локализации поиска видна на странице
 def test_search_where_on_page(driver):
     main_page = MainPage(driver)
@@ -113,14 +121,6 @@ def test_button_Orders_has_true_name(driver):
     main_page = MainPage(driver)
     button_name = main_page.get_text_of_element(MainPage.ORDERS)
     assert button_name == TestData.NAME_OF_BUTTON_ORDERS
-
-
-# Кнопка Избранное кликабельна, попадаем в соответствующий раздел
-def test_Orders_clickable(driver):
-    main_page = MainPage(driver)
-    main_page.find_click(MainPage.FAVORITES)
-    Favorites_page_header = main_page.get_text_of_element(MainPage.HEAD_OF_PAGE_FAVORITES)
-    assert Favorites_page_header == TestData.HEADER_OF_PAGE_FAVORITES
 
 
 # Кнопка Корзина видна на странице
