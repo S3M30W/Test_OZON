@@ -14,6 +14,7 @@ class TestData:
     FRESH = "Ozon fresh"
     NAME_OF_BUTTON_PREMIUM = "Premium"
     NAME_OF_BUTTON_OZON_TRAVEL = "Билеты и Отели"
+    HEADER_OF_WINDOW_OZON_TRAVEL = "Поиск дешёвых авиабилетов"
     NAME_OF_BUTTON_OZON_CARD = "Ozon Карта"
     NAME_OF_BUTTON_INSTALMENT = "Рассрочка"
     NAME_OF_BUTTON_STOCKS = "Акции"
