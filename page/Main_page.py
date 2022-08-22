@@ -15,7 +15,7 @@ class MainPage(BasePage):
     HEAD_OF_PAGE_ELECTRONICA_SUB = (By.XPATH, "//h1[@class = 'b3a0' and contains (text(), 'Электроника')]")
     SEARCH_WHERE = (By.CSS_SELECTOR, "div[data-widget = 'searchBarDesktop'] form div span")
     SEARCH_INPUT = (By.XPATH, "//input[@placeholder = 'Искать на Ozon']")
-    SUBMIT_SEARCH = (By.XPATH, "//button[@class='ia0a']")
+    SUBMIT_SEARCH = (By.XPATH, "//button[@class='a1ia']")
     ENTRANCE = (By.CSS_SELECTOR, "div[data-widget = 'profileMenuAnonymous']")
     POPUP_WINDOW_ENTRANCE = (By.XPATH, "//div[@style='position: absolute; top: -9999px; left: -9999px;']")
     FAVOURITES = (By.XPATH, "//a[@href = '/my/favorites']")
@@ -29,7 +29,7 @@ class MainPage(BasePage):
     OZON_TRAVEL = (
         By.XPATH, "//a[@href='https://www.ozon.ru/travel/?perehod=ozon_menu_header' and @class = 'a4 r5c']")
     OZON_CARD = (By.XPATH,
-                 "//a[@href='https://www.ozon.ru/highlight/keshbek-do-30-dlya-ozon-schet-i-premium-323369' and @class='a4 r5c']")
+                 "//a[@href='https://finance.ozon.ru/' and @class='a4 r5c']")
     INSTALMENT = (By.XPATH, "//a[@href='/section/limit/' and @class = 'a4 r5c']")
     STOCKS = (By.XPATH, "//a[@href='/highlight/globalpromo/' and @class = 'a4 r5c']")
     HEAD_OF_PAGE_ACTIONS = (By.XPATH, "//div[@class = 'a3p5' and contains (text(), 'Акции и спецпредложения')]")
